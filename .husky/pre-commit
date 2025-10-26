@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Run type check
+npm run type-check || exit 1
+
+# Run tests
+npm run test:coverage || exit 1
+
+# Run build to catch any build errors
+npm run build || exit 1
+
+echo "✅ Pre-commit checks passed!"

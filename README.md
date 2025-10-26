@@ -45,6 +45,20 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 🧪 Testing
 
+### Local Testing (Run Before Push)
+
+**Pre-push checklist:**
+```bash
+# Run the complete pre-push check script
+./scripts/pre-push-check.sh
+```
+
+This runs:
+1. ✅ Type checking
+2. ✅ Full test suite with coverage
+3. ✅ Production build
+
+**Individual test commands:**
 ```bash
 # Run all tests
 npm test
@@ -52,21 +66,24 @@ npm test
 # Unit tests only
 npm run test:unit
 
-# Integration tests
-npm run test:integration
-
-# E2E tests
-npm run test:e2e
-
 # Coverage report (requires 80%+)
 npm run test:coverage
 
 # Type checking
 npm run type-check
 
-# Linting
-npm run lint
+# Build (catches build errors)
+npm run build
 ```
+
+### Git Hooks
+
+Pre-commit hooks automatically run:
+- Type check
+- Tests with coverage
+- Build verification
+
+**Cost Saving:** Always test locally before pushing to avoid unnecessary GitHub Actions minutes and Vercel deployments.
 
 ## 🚢 Deployment
 
