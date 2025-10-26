@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 26, 26, 26;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 248, 247, 244;
+
+  /* Luxury Neutral Palette */
+  --luxury-charcoal: #1a1a1a;
+  --luxury-gold: #b8934c;
+  --luxury-silver: #8e8e8e;
+  --luxury-cream: #f8f7f4;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
