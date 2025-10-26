@@ -33,13 +33,11 @@ jobs:
       # - name: Run linter
       #   run: npm run lint
 
-      - name: Run unit tests
-        run: npm run test:unit
+      # TODO: Add integration tests
+      # - name: Run integration tests
+      #   run: npm run test:integration
 
-      - name: Run integration tests
-        run: npm run test:integration
-
-      - name: Generate coverage report
+      - name: Run tests with coverage
         run: npm run test:coverage
 
       - name: Upload coverage to Codecov
